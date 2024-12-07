@@ -1,0 +1,301 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <title>Resonpsive Ordering Platform</title>
+</head>
+
+<body>
+
+    <!--main-->
+    <div class="main">
+        
+        <!--main navbar-->
+        <div class= "main-navbar">
+            <!--search bar-->
+            <div class="search" >
+                <input type="text" id="searchBar" placeholder="Search" onkeyup="searchFunction()">
+                <button class="search-btn">Search</button>
+            </div>
+           
+            <!--profile icon on the left side of the of the navbar-->
+            <div class ="profile">
+                <a class="cart" href="#" onclick="toggleCartPopup()">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <span class="cart-count" id="cart-count"></span>
+                </a>
+            </div>
+        </div>
+        <!--shopping cart section-->
+        <div id="cart-popup" class="cart-popup">
+            <h4>Shopping Cart</h4>
+            <table id="cart-item">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>#</th>
+                        <th>Price($)</th>
+                        <th>Total($)</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <p>Total($) <span id="cart-total">0.00</span></p>
+           
+            <a class="cart-close"onclick="closeCart()"><ion-icon name="close-circle-outline"></ion-icon></a>
+        </div>
+        <!--main Highlight-->
+            <div class ="main-Highlight">
+                <!--title arrangement & arrow-->
+                <div class="main-header">
+                    <h2 class="main-title">Popular Components</h2>
+                    <div class="main-arrow">
+                        <ion-icon class="back" name="chevron-back-circle-outline"></ion-icon>
+                        <ion-icon class="next" name="chevron-forward-circle-outline"></ion-icon>
+                    </div>
+                
+                
+            </div>
+            <!--highlight menu-->
+            <div class="highlight-wrapper">
+                <div class="highlight-card">
+                    <img class="highlight-img" src="RAM CHIP.jpeg">
+                    <div class="highlight-desc">
+                        <h4>RAM Chip</h4>
+                        <p>$20.00</p>
+        
+                    </div>
+                      
+            </div>
+            
+         <div class="highlight-card">
+            <img class="highlight-img" src="Laptop Fan.jpeg">
+            <div class="highlight-desc">
+                <h4>Fan</h4>
+                <p>$40.00</p>
+        
+           </div>
+         </div>
+        <div class="highlight-card">
+        <img class="highlight-img" src="download (5).jpeg">
+        <div class="highlight-desc">
+            <h4>KeyBoard</h4>
+            <p>$15.00</p>
+        </div>
+        </div>
+        <div class="highlight-card">
+        <img class="highlight-img" src="Mouse.jpeg">
+        <div class="highlight-desc">
+            <h4>Mouse</h4>
+            <p>$5.00</p>
+            </div>
+         </div>
+
+    
+        </div>
+        <!--list of food menus-->
+    </div>
+    <!--main menu/order-->
+    <div class="main-sections">
+                    <!--list of food menu-->
+                    <div class="main-detail">
+                        <h2 class="main-title">Choose Items</h2>
+                        <div class ="detail-wrapper" id="components">
+                            <div class="card">
+                                <img class="detail-img" src="HP Laptop.jpg">
+                                <div class="detail-desc">
+                                    <div class="detail-name">
+                                        <h4 class="component" data-name ="HP Laptop">HP Laptop</h4>
+                                        <p class="detail-sub">HP 15s Intel Core i7 15.6-Inch Full-HD Laptop, Natural Silver</p>
+                                        <p class="price">$15000</p>
+                                        <form>
+                                            <input type="hidden" id="itemPrice" value="$15000">
+                                            <button class="add-to-cart-btn" onclick="addToCart('HP Laptop', document.getElementById('itemPrice').value)">
+                                                Add to Cart
+                                            </button>
+                                        </form>
+                                    </div>
+                                    <ion-icon class="detail-favourite" name="bookmark-outline"></ion-icon>
+                                </div>
+                            </div>
+        
+                                <div class="card">
+                                    <img class ="detail-img" src="Logitech G.jpeg">
+                                    <div class="detail-desc">
+                                        <div class="detail-name">
+                                            <h4 class="component" data-name ="Alcatroz NeoX HP500-RGB Gaming Headset">Alcatroz NeoX HP500-RGB Gaming Headset </h4>
+                                            <p class="detail-sub">White/Light Grey</p>
+                                            <p class="price">$400</p>
+                                            <form>
+                                                <input type="hidden" id="itemPrice" value="$400">
+                                                <button class="add-to-cart-btn" onclick="addToCart('Alcatroz NeoX HP500-RGB Gaming Headset', document.getElementById('itemPrice').value)">
+                                                    Add to Cart
+                                                </button>
+                                            </form>
+                                        </div>
+                                        <ion-icon class="detail-favourite" name="bookmark-outline"></ion-icon> 
+                                    </div>
+                                </div>
+                            
+                                <div class="card">
+                                    <img class ="detail-img" src="Mini MegxSnow 3_0 - RTX 4060_4060 Ti x Intel & AMD PC (FREE COOLER UPGRADE).jpeg">
+                                    <div class="detail-desc">
+                                        <div class="detail-name"  >
+                                            <h4 class="component" data-name ="Mini MegxSnow 3.0">Mini MegxSnow 3.0</h4>
+                                            <p class="detail-sub">Mini MegxSnow 3_0 - RTX 4060_4060 Ti x Intel & AMD PC (FREE COOLER UPGRADE)</p>
+                                            <p class="price">$20000</p>
+                                            <form>
+                                                <input type="hidden" id="itemPrice" value="$20000">
+                                                <button class="add-to-cart-btn" onclick="addToCart('Mini MegxSnow 3.0', document.getElementById('itemPrice').value)">
+                                                    Add to Cart
+                                                </button>
+                                            </form>
+                                        </div>
+                                        <ion-icon class="detail-favourite" name="bookmark-outline"></ion-icon> 
+                                    </div>
+                                </div>
+                            
+                                <div class="card">
+                                    <img class ="detail-img" src="Doorking 1830-402 Replacement Memory Chip.jpeg">
+                                    <div class="detail-desc">
+                                        <div class="detail-name">
+                                            <h4 class="component" data-name ="Doorking 1830-402">Doorking 1830-402</h4>
+                                            <p class="detail-sub">Doorking 1830-402 Replacement Memory Chip</p>
+                                            <p class="price" itemPrice="$5000">$5000</p>
+                                            <form>
+                                                <input type="hidden" id="itemPrice" value="$5000">
+                                                <button class="add-to-cart-btn" onclick="addToCart('Doorking 1830-402', document.getElementById('itemPrice').value)">
+                                                    Add to Cart
+                                                </button>
+                                            </form>
+                                        </div>
+                                        <ion-icon class="detail-favourite" name="bookmark-outline"></ion-icon> 
+                                    </div>
+                                </div>
+                           
+                                <div class="card">
+                                    <img class ="detail-img" src="Cyber Acoustics CA-2014 Computer Speakers, Full Stereo Sound, Convenient Controls, Easy Setup.jpeg">
+                                    <div class="detail-desc">
+                                        <div class="detail-name">
+                                            <h4 class="component" data-name = "Cyber Acoustics CA-2014">Cyber Acoustics CA-2014</h4>
+                                            <p class="detail-sub">Cyber Acoustics CA-2014 Computer Speakers, Full Stereo Sound, Convenient Controls, Easy Setup</p>
+                                            <p class="price" itemPrice="$800">$800</p>
+                                            <form>
+                                                <input type="hidden" id="itemPrice" value="$800">
+                                                <button class="add-to-cart-btn" onclick="addToCart('Cyber Acoustics CA-2014', document.getElementById('itemPrice').value)">
+                                                    Add to Cart
+                                                </button>
+                                            </form>
+                                        </div>
+                                        <ion-icon class="detail-favourite" name="bookmark-outline"></ion-icon> 
+                                    </div>
+                                </div> 
+                            
+                                <div class="card">
+                                    <img class ="detail-img" src="DELL Ultra HD 5K Monitor UP2715K 27-Inch Screen LED-Lit Monitor, Black.jpeg">
+                                    <div class="detail-desc">
+                                        <div class="detail-name">
+                                            <h4 class="component" data-name = "DELL Ultra HD 5K Monitor">DELL Ultra HD 5K Monitor</h4>
+                                            <p class="detail-sub">DELL Ultra HD 5K Monitor UP2715K 27-Inch Screen LED-Lit Monitor, Black</p>
+                                            <p class="price">$7000</p>
+                                            <form>
+                                                <input type="hidden" id="itemPrice" value="$7000">
+                                                <button class="add-to-cart-btn" onclick="addToCart('DELL Ultra HD 5K Monitor', document.getElementById('itemPrice').value)">
+                                                    Add to Cart
+                                                </button>
+                                            </form>
+                                        </div>
+                                        <ion-icon class="detail-favourite" name="bookmark-outline"></ion-icon> 
+                                    </div>
+                                </div> 
+                            
+                                <div class="card">
+                                    <img class ="detail-img" src="Laptop Fan.jpeg">
+                                    <div class="detail-desc">
+                                        <div class="detail-name">
+                                            <h4 class="component" data-name = "Laptop Fan">Laptop Fan</h4>
+                                            <p class="detail-sub">NOBRAND I230092 Laptop CPU Cooling Fan for HP Notebook HP Notebook Cooler</p>
+                                            <p class="price">$700</p>
+                                            <form>
+                                                <input type="hidden" id="itemPrice" value="$700">
+                                                <button class="add-to-cart-btn" onclick="addToCart('Laptop Fan', document.getElementById('itemPrice').value)">
+                                                    Add to Cart
+                                                </button>
+                                            </form>
+                                        </div>
+                                        <ion-icon class="detail-favourite" name="bookmark-outline"></ion-icon> 
+                                </div>
+                            </div>
+                           
+                          
+                            <div class="card">
+                                <img class ="detail-img" src="download (5).jpeg">
+                                <div class="detail-desc">
+                                    <div class="detail-name">
+                                        <h4 class="component" data-name = "KeyBoard">KeyBoard</h4>
+                                        <p class="detail-sub">Keychron K2 75% Layout 84 Bluetooth Wireless/USB Wired Mechanical Keyboard</p>
+                                        <p class="price">$300</p>
+                                        <form>
+                                            <input type="hidden" id="itemPrice" value="$300">
+                                            <button class="add-to-cart-btn" onclick="addToCart('RAM CHIP', document.getElementById('itemPrice').value)">
+                                                Add to Cart
+                                            </button>
+                                        </form>
+                                    </div>
+                                    <ion-icon class="detail-favourite" name="bookmark-outline"></ion-icon> 
+                                </div>
+                            </div>
+                          
+                        
+                          
+                            <div class="card">
+                                <img class ="detail-img" src="Mouse.jpeg">
+                                <div class="detail-desc">
+                                    <div class="detail-name">
+                                        <h4 class="component" data-name = "Mouse">Mouse</h4>
+                                        <p class="detail-sub">TECKNET USB 3600DPI 4</p>
+                                        <p class="price" >$300</p>
+                                        <form>
+                                            <input type="hidden" id="itemPrice" value="$300">
+                                            <button class="add-to-cart-btn" onclick="addToCart('Mouse', document.getElementById('itemPrice').value)">
+                                                Add to Cart
+                                            </button>
+                                        </form>
+                                    </div>
+                                    <ion-icon class="detail-favourite" name="bookmark-outline"></ion-icon> 
+                            </div>
+                        </div>
+                    
+                        <div class="card">
+                            <img class ="detail-img" src="RAM CHIP.jpeg">
+                            <div class="detail-desc">
+                                <div class="detail-name" >
+                                    <h4 class="component" data-name = "RAM CHIP">RAM CHIP</h4>
+                                    <p class="detail-sub"></p>
+                                    <p class="price">$1300</p>
+                                    <form>
+                                        <input type="hidden" id="itemPrice" value="$1300">
+                                        <button class="add-to-cart-btn" onclick="addToCart('RAM CHIP', document.getElementById('itemPrice').value)">
+                                            Add to Cart
+                                        </button>
+                                    </form>
+                                </div>
+                                <ion-icon class="detail-favourite" name="bookmark-outline"></ion-icon> 
+                            </div>
+                        </div>
+                    
+                        </div>
+                </div>
+    </div>  
+
+
+</body>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<!-- adding javascript --> {inspect 11:07}08:37
+<script src = "https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="app.js"></script>
+</html>
